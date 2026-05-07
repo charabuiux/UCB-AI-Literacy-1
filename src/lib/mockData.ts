@@ -181,9 +181,41 @@ export const modules: Module[] = [
 ];
 
 export const promptLibrary = [
-  { id: 1, role: "HR", task: "Drafting", title: "Job Description Draft", text: "Act as an HR specialist. Draft a job description for a mid-level IT support specialist at UC Berkeley." },
-  { id: 2, role: "Finance", task: "Summarizing", title: "Budget Summary", text: "Summarize this budget report into 3 key bullet points for the department chair." },
-  { id: 3, role: "Comms", task: "Drafting", title: "Newsletter Intro", text: "Draft an engaging introductory paragraph for the monthly staff newsletter." },
+  { 
+    id: 1, 
+    role: "HR", 
+    task: "Drafting", 
+    title: "Job Description Draft", 
+    text: "Act as an HR specialist at UC Berkeley. I need to draft a job description for a mid-level IT support specialist. Please structure the description with the following sections: 1. Department Overview, 2. Key Responsibilities (use bullet points), 3. Required Qualifications, and 4. Preferred Qualifications. Ensure the tone is professional, welcoming, and aligns with UC Berkeley's commitment to diversity, equity, and inclusion." 
+  },
+  { 
+    id: 2, 
+    role: "Finance", 
+    task: "Summarizing", 
+    title: "Budget Summary", 
+    text: "You are a financial analyst. Review the provided department budget report and summarize it into 3 key bullet points for the department chair. Focus on: 1. Total expenditure vs. budget allocation, 2. Major areas of overspend or underspend, and 3. Recommendations for the next quarter. Format the output clearly with bold headers." 
+  },
+  { 
+    id: 3, 
+    role: "Comms", 
+    task: "Drafting", 
+    title: "Newsletter Intro", 
+    text: "Act as a Communications Director. Draft an engaging introductory paragraph (approx. 3-4 sentences) for our monthly staff newsletter. The tone should be upbeat and appreciative. Highlight that this month we are celebrating staff achievements and introducing the new campus AI guidelines. Use active voice and avoid jargon." 
+  },
+  { 
+    id: 4, 
+    role: "Admin", 
+    task: "Planning", 
+    title: "Meeting Agenda", 
+    text: "Create a structured 1-hour meeting agenda for a project kickoff. The project is 'Campus AI Training Rollout'. Include time allocations for introductions, project goals, timeline review, role assignments, and Q&A. Add a brief note at the end about reviewing meeting action items." 
+  },
+  { 
+    id: 5, 
+    role: "Faculty", 
+    task: "Brainstorming", 
+    title: "Syllabus AI Policy", 
+    text: "Act as a curriculum designer. Help me brainstorm a short syllabus statement regarding the use of generative AI in my course. It should state that AI tools may be used for brainstorming and outlining, but all submitted work must be original or properly cited. Keep it student-friendly but firm." 
+  }
 ];
 
 export const glossary = [

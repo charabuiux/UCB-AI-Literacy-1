@@ -5,6 +5,7 @@ import { promptLibrary, glossary } from "@/lib/mockData";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Copy, Check, Search, ExternalLink } from "lucide-react";
+import PolicyChat from "@/components/PolicyChat";
 
 export default function Resources() {
   const { userRole } = useAppStore();
@@ -166,24 +167,51 @@ export default function Resources() {
       )}
 
       {activeTab === "policy" && (
-        <div className="animate-in fade-in slide-in-from-bottom-2 duration-500 max-w-3xl">
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-            <h2 className="text-xl font-bold text-slate-900 mb-6">UC Berkeley AI Policies</h2>
-            <div className="space-y-4">
-              <a href="#" className="flex items-center justify-between p-4 rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition group">
-                <div>
-                  <h3 className="font-semibold text-[var(--color-berkeley-blue)] group-hover:underline">Campus AI Guidelines</h3>
-                  <p className="text-sm text-slate-500 mt-1">Official guidelines for using AI at UC Berkeley.</p>
-                </div>
-                <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-blue-500" />
-              </a>
-              <a href="#" className="flex items-center justify-between p-4 rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition group">
-                <div>
-                  <h3 className="font-semibold text-[var(--color-berkeley-blue)] group-hover:underline">Data Privacy & FERPA</h3>
-                  <p className="text-sm text-slate-500 mt-1">How AI tools interact with sensitive data.</p>
-                </div>
-                <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-blue-500" />
-              </a>
+        <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200 h-fit">
+              <h2 className="text-xl font-bold text-slate-900 mb-6">UC Berkeley AI Policies</h2>
+              <div className="space-y-4">
+                <a href="#" className="flex items-center justify-between p-4 rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition group">
+                  <div>
+                    <h3 className="font-semibold text-[var(--color-berkeley-blue)] group-hover:underline">Campus AI Guidelines</h3>
+                    <p className="text-sm text-slate-500 mt-1">Official guidelines for using AI at UC Berkeley.</p>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-blue-500" />
+                </a>
+                <a href="#" className="flex items-center justify-between p-4 rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition group">
+                  <div>
+                    <h3 className="font-semibold text-[var(--color-berkeley-blue)] group-hover:underline">Data Privacy & FERPA</h3>
+                    <p className="text-sm text-slate-500 mt-1">How AI tools interact with sensitive institutional data.</p>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-blue-500" />
+                </a>
+                <a href="#" className="flex items-center justify-between p-4 rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition group">
+                  <div>
+                    <h3 className="font-semibold text-[var(--color-berkeley-blue)] group-hover:underline">Academic Integrity (AI)</h3>
+                    <p className="text-sm text-slate-500 mt-1">Syllabus templates and integrity principles for educators.</p>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-blue-500" />
+                </a>
+                <a href="#" className="flex items-center justify-between p-4 rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition group">
+                  <div>
+                    <h3 className="font-semibold text-[var(--color-berkeley-blue)] group-hover:underline">Procurement & Security</h3>
+                    <p className="text-sm text-slate-500 mt-1">Requesting approval for third-party AI software vendors.</p>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-blue-500" />
+                </a>
+                <a href="#" className="flex items-center justify-between p-4 rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition group">
+                  <div>
+                    <h3 className="font-semibold text-[var(--color-berkeley-blue)] group-hover:underline">Copyright & IP Guidance</h3>
+                    <p className="text-sm text-slate-500 mt-1">Guidelines on intellectual property concerning AI-generated output.</p>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-blue-500" />
+                </a>
+              </div>
+            </div>
+            
+            <div className="h-full">
+              <PolicyChat />
             </div>
           </div>
         </div>
